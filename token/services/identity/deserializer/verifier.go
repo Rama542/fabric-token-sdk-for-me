@@ -27,7 +27,9 @@ type TypedVerifierDeserializerMultiplex struct {
 }
 
 func NewTypedVerifierDeserializerMultiplex() *TypedVerifierDeserializerMultiplex {
-	return &TypedVerifierDeserializerMultiplex{deserializers: map[idriver.IdentityType][]TypedVerifierDeserializer{}}
+	return &TypedVerifierDeserializerMultiplex{
+		deserializers: map[idriver.IdentityType][]TypedVerifierDeserializer{},
+	}
 }
 
 func (v *TypedVerifierDeserializerMultiplex) AddTypedVerifierDeserializer(typ idriver.IdentityType, d TypedVerifierDeserializer) {
